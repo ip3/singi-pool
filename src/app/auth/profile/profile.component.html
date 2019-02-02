@@ -63,7 +63,8 @@
     <div fxLayoutAlign="flex-start" *ngFor="let item of this.US.getCommentsForId(this.US.getProfileToShow().id)">
       <mat-card >{{item.comment}}
         <div>
-          <font size="-1.5">{{this.US.getNameById(item.idFrom)}}, {{item.date}}</font>
+          <font size="-1.5"> 
+            <a href="javascript:;" routerLink="/profile" (click)="this.US.profileToShow=item.idFrom">{{this.US.getNameById(item.idFrom)}}</a>, {{item.date}}</font>
         </div>
       </mat-card>
     </div>

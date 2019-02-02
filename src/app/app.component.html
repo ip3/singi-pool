@@ -71,9 +71,10 @@
           <a *ngIf="loggedIn" routerLink="/notifications" (click)="onBadge()"><span matBadge="3" matBadgeOverlap="true" matBadgeColor="warn" [matBadgeHidden]=hiddenBadge >Actions</span></a>
           <a *ngIf="loggedIn && this.US.getCurrentUser().typeOfUser == 'Driver'" routerLink="/new-ride">New Ride</a>
           <a *ngIf="loggedIn" routerLink="/all-rides">Rides</a>
-          <div *ngIf="loggedIn" [matMenuTriggerFor]="menu" fxLayoutAlign="center center">
-            <a>{{ this.US.getCurrentUser().firstName }}</a>
+          <div *ngIf="loggedIn" [matMenuTriggerFor]="menu" >
+            <a href="javascript:;" fxLayoutAlign="center center">{{ this.US.getCurrentUser().firstName }}
             <mat-icon>expand_more</mat-icon>
+            </a>
           </div>
 
 

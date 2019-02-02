@@ -70,7 +70,7 @@
 
 <mat-table [dataSource]="rideSource" matSort>
     <ng-container matColumnDef="rideName" sticky>
-    <mat-header-cell *matHeaderCellDef mat-sort-header fxLayout fxLayout="row" fxLayoutAlign="center" fxLayoutGap="20px" >
+    <mat-header-cell *matHeaderCellDef mat-sort-header fxLayout="row" fxLayoutAlign="center" fxLayoutGap="20px" >
       {{rideToggle ? 'All rides' : 'My rides'}}
     <mat-slide-toggle [(ngModel)]="rideToggle"></mat-slide-toggle>
     </mat-header-cell>
