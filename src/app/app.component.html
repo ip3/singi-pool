@@ -38,7 +38,7 @@
         <mat-icon>directions_bus</mat-icon>
         New Ride
       </a>
-      <a *ngIf="loggedIn" mat-list-item routerLink="/profile" (click)="sidenav.close()">
+      <a *ngIf="loggedIn" mat-list-item routerLink="/profile" (click)="myProfile(); sidenav.close()">
         <mat-icon>person</mat-icon>
         My Profile
       </a>
