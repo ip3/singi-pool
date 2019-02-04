@@ -18,7 +18,7 @@
         <form [formGroup]="secondFormGroup" fxLayoutGap="20px">
           <ng-template matStepLabel>Time of departure</ng-template>
           <mat-form-field >
-            <input matInput [matDatepicker]="picker" placeholder="Search by date of departure" formControlName="secondCtrl">
+            <input matInput [matDatepicker]="picker" placeholder="Search by date of departure" formControlName="secondCtrl" (keyup)="doFilter($event.target.value)">
             <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
             <mat-datepicker #picker></mat-datepicker>
           </mat-form-field>
@@ -29,7 +29,7 @@
         <form [formGroup]="thirdFormGroup">
           <ng-template matStepLabel>Starting location</ng-template>
           <mat-form-field>
-            <input matInput placeholder="Starting location" formControlName="thirdCtrl">
+            <input matInput placeholder="Starting location" formControlName="thirdCtrl" (keyup)="doFilter($event.target.value)">
           </mat-form-field>
         </form>
       </mat-step>
@@ -37,7 +37,7 @@
         <form [formGroup]="fourthFormGroup">
           <ng-template matStepLabel>Destination</ng-template>
           <mat-form-field>
-            <input matInput placeholder="Destination" formControlName="fourthCtrl">
+            <input matInput placeholder="Destination" formControlName="fourthCtrl" (keyup)="doFilter($event.target.value)">
           </mat-form-field>
         </form>
       </mat-step>
@@ -45,7 +45,7 @@
         <form [formGroup]="fifthFormGroup">
           <ng-template matStepLabel>Number of passengers</ng-template>
           <mat-form-field>
-            <input matInput placeholder="Number of passengers" formControlName="fifthCtrl">
+            <input matInput placeholder="Number of passengers" formControlName="fifthCtrl" (keyup)="doFilter($event.target.value)">
           </mat-form-field>
         </form>
       </mat-step>
